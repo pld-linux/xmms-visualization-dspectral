@@ -2,7 +2,7 @@ Summary:	Dual Spectral Analyzer
 Summary(pl):	Podwójna Analiza Spektralna
 Name:		xmms-visualization-dspectral
 Version:	1.2.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://www.shell.linux.se/bm/f/dspectral-v%{version}.tar.gz
