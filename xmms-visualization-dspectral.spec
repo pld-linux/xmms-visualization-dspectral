@@ -2,7 +2,7 @@ Summary:	Dual Spectral Analyzer.
 Summary(pl):	Podwójna Analiza Spektralna.
 Name:		xmms-visualization-dspectral
 Version:	1.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://hem.passagen.se/joakime/dspectral-%{version}.tar.gz
@@ -37,13 +37,11 @@ install -d $RPM_BUILD_ROOT/`%{_bindir}/xmms-config --data-dir`/
 	INSTALL-DIR=$RPM_BUILD_ROOT/`%{_bindir}/xmms-config --visualization-plugin-dir`/ \
 	XMMS_DATADIR=$RPM_BUILD_ROOT/`%{_bindir}/xmms-config --data-dir`/
 
-gzip -9nf Change* README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Change* README
 %attr(755,root,root) %{_libdir}/xmms/*/*.so
 %{_datadir}/xmms/*
