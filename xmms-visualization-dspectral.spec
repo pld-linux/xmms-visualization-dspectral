@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Dual Spectral Analyzer plugin for XMMS.
 
 %description -l pl
-Plugin Podwójnej Analizy Spektralnej.
+Wtyczka Podwójnej Analizy Spektralnej dla XMMS-a.
 
 %prep
 %setup -q -n dspectral-v%{version}
