@@ -1,12 +1,12 @@
 Summary:	Dual Spectral Analyzer
 Summary(pl):	Podwójna Analiza Spektralna
 Name:		xmms-visualization-dspectral
-Version:	1.2
-Release:	2
+Version:	1.2.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Source0:	http://hem.passagen.se/joakime/dspectral-%{version}.tar.gz
-URL:		http://hem.passagen.se/joakime/linuxapp.html
+Source0:	http://www.shell.linux.se/bm/f/dspectral-v%{version}.tar.gz
+URL:		http://www.shell.linux.se/bm/index.php
 Requires:	xmms
 BuildRequires:	xmms-devel >= 1.2.3
 BuildRequires:	glib-devel >= 1.2.2
@@ -23,7 +23,7 @@ Dual Spectral Analyzer plugin for XMMS.
 Plugin Podwójnej Analizy Spektralnej.
 
 %prep
-%setup -q -n dspectral-%{version}
+%setup -q -n dspectral-v%{version}
 
 %build
 %{__make} OPT="%{rpmcflags}"
