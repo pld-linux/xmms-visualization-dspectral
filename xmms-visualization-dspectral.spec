@@ -1,5 +1,5 @@
-Summary:	Dual Spectral Analyzer.
-Summary(pl):	Podwójna Analiza Spektralna.
+Summary:	Dual Spectral Analyzer
+Summary(pl):	Podwójna Analiza Spektralna
 Name:		xmms-visualization-dspectral
 Version:	1.2
 Release:	2
