@@ -7,12 +7,12 @@ License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://www.shell.linux.se/bm/f/dspectral-v%{version}.tar.gz
 URL:		http://www.shell.linux.se/bm/index.php
-Requires:	xmms
 BuildRequires:	xmms-devel >= 1.2.3
-BuildRequires:	glib-devel >= 1.2.2
-BuildRequires:	gtk+-devel >= 1.2.2
+Requires:	xmms
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define         _xmms_plugin_dir        %(xmms-config --visualization-plugin-dir)
+%define		_xmms_data_dir		%(xmms-config --data-dir)
 
 %description
 Dual Spectral Analyzer plugin for XMMS.
@@ -28,12 +28,11 @@ Plugin Podwójnej Analizy Spektralnej.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/`%{_bindir}/xmms-config --visualization-plugin-dir`/
-install -d $RPM_BUILD_ROOT/`%{_bindir}/xmms-config --data-dir`/
+install -d $RPM_BUILD_ROOT{%{_xmms_plugin_dir},%{_xmms_data_dir}}
 
 %{__make} install \
-	INSTALL-DIR=$RPM_BUILD_ROOT/`%{_bindir}/xmms-config --visualization-plugin-dir`/ \
-	XMMS_DATADIR=$RPM_BUILD_ROOT/`%{_bindir}/xmms-config --data-dir`/
+	INSTALL-DIR=$RPM_BUILD_ROOT%{_xmms_plugin_dir} \
+	XMMS_DATADIR=$RPM_BUILD_ROOT%{_xmms_data_dir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -41,5 +40,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Change* README
-%attr(755,root,root) %{_libdir}/xmms/*/*.so
-%{_datadir}/xmms/*
+%attr(755,root,root) %{_xmms_plugin_dir}/*.so
+%{_xmms_data_dir}/*
