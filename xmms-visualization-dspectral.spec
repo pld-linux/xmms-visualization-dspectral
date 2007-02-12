@@ -1,5 +1,5 @@
 Summary:	Dual Spectral Analyzer
-Summary(pl):	Podwójna Analiza Spektralna
+Summary(pl.UTF-8):   PodwÃ³jna Analiza Spektralna
 Name:		xmms-visualization-dspectral
 Version:	1.2.1
 Release:	3
@@ -16,8 +16,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Dual Spectral Analyzer plugin for XMMS.
 
-%description -l pl
-Wtyczka Podwójnej Analizy Spektralnej dla XMMS-a.
+%description -l pl.UTF-8
+Wtyczka PodwÃ³jnej Analizy Spektralnej dla XMMS-a.
 
 %prep
 %setup -q -n dspectral-v%{version}
