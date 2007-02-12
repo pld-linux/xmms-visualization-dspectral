@@ -1,5 +1,5 @@
 Summary:	Dual Spectral Analyzer
-Summary(pl.UTF-8):   Podwójna Analiza Spektralna
+Summary(pl.UTF-8):	Podwójna Analiza Spektralna
 Name:		xmms-visualization-dspectral
 Version:	1.2.1
 Release:	3
